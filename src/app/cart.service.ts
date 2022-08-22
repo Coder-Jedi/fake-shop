@@ -32,6 +32,7 @@ export class CartService {
   }
   emptyCart() : Product[] {
     this.items = [];
+    this.cartUpdateEvent.emit(this.isCartEmpty());
     return this.items;
   }
   isCartEmpty() : boolean {

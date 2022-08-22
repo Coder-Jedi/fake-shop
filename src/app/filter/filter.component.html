@@ -1,7 +1,19 @@
 <div class="filter-container">
     <ul>
-        <li>All Categories</li>
-        <li>Tables</li>
-        <li>Chairs</li>
+        <li>
+            <app-filter-item filterName="All Categories" 
+                            (filterSelect)="onFilterSelect($event)"
+                            [isActive]="filters==null || filters.length==0"></app-filter-item>
+        </li>
+        <li>
+            <app-filter-item filterName="Tables" 
+                            (filterSelect)="onFilterSelect($event)"
+                            [isActive]="filters!=null && filters.includes('tables')"></app-filter-item>
+        </li>
+        <li>
+            <app-filter-item filterName="Chairs" 
+                            (filterSelect)="onFilterSelect($event)"
+                            [isActive]="filters!=null && filters.includes('chairs')"></app-filter-item>
+        </li>
     </ul>
 </div>
