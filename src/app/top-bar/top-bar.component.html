@@ -1,0 +1,7 @@
+<div class="container">
+    <a routerLink="/"><h2>Fake Shop</h2></a>
+    <div class="filler-div"></div>
+    <a routerLink="/cart">
+        <button class="button fancy-button" [disabled]="emptyCartObservable | async">Checkout</button>
+    </a>
+</div>

@@ -1,0 +1,14 @@
+ul {
+    padding: 0 5px;
+}
+ul li {
+padding: 10px 20px;
+}
+
+body {
+    padding: 0;
+}
+
+.filter-container {
+    border-right: deepskyblue solid 1px;
+}

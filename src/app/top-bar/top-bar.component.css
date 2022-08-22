@@ -1,0 +1,11 @@
+.container {
+    background-color: deepskyblue;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 15px;
+}
+.filler-div {
+    flex-grow: 1;
+}

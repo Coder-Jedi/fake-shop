@@ -1,0 +1,12 @@
+<div class="card-container">
+<img [src]="product.image" style="width: 225px; height: 160px;">
+<div class="card-name-price-container">
+    <h3>{{product.name}}</h3>
+    <div style="flex-grow:1;"></div>
+    <h3>{{product.price | currency:'USD':'symbol':'1.0-2'}}</h3>
+</div>
+<p class="limit-chars">{{product.description}}</p>
+<div class="card-button-container">
+<button class="button" (click)="addToCart(product)">Add to Cart</button>
+</div>
+</div>

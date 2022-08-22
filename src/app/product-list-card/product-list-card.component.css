@@ -1,0 +1,27 @@
+.card-container {
+    padding: 20px;
+    width: 267px;
+    border: solid 1px;
+}
+.card-name-price-container {
+    display: flex;
+    margin: 10px 0;
+}
+
+p {
+    margin: 0;
+}
+h3 {
+    margin: 0;
+}
+.limit-chars {
+    width: 225px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

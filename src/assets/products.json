@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Wazzu",
+    "price": 1071,
+    "description": "Elit ad minim dolor fugiat est adipisicing anim veniam velit est dolore. Laboris et veniam et ullamco mollit esse fugiat Lorem anim excepteur nulla culpa et. In veniam Lorem ut aliqua labore incididunt mollit eiusmod ea non.",
+    "image": "https://picsum.photos/seed/veniam/300/200"
+  },
+  {
+    "id": 2,
+    "name": "Marketoid",
+    "price": 1774,
+    "description": "Ullamco ut deserunt proident cillum aliquip amet consectetur aliqua.",
+    "image": "https://picsum.photos/seed/deserunt/300/200"
+  },
+  {
+    "id": 3,
+    "name": "Xleen minim",
+    "price": 1407,
+    "description": "Dolor incididunt pariatur laborum fugiat ullamco.",
+    "image": "https://picsum.photos/seed/nisi/300/200"
+  },
+  {
+    "id": 4,
+    "name": "Norsup nulla",
+    "price": 1273,
+    "description": "Consequat aute amet irure minim non minim reprehenderit occaecat laborum. In irure deserunt voluptate nostrud sint eiusmod exercitation velit ex eiusmod commodo. Nulla fugiat cupidatat enim velit labore sint non cillum.",
+    "image": "https://picsum.photos/seed/reprehenderit/300/200"
+  },
+  {
+    "id": 5,
+    "name": "Sarasonic veniam nulla",
+    "price": 216,
+    "description": "Est nulla ex aute culpa proident ad occaecat ut commodo.",
+    "image": "https://picsum.photos/seed/magna/300/200"
+  },
+  {
+    "id": 6,
+    "name": "Spacewax amet",
+    "price": 1526,
+    "description": "Ipsum ut aliquip non dolore esse consequat laboris.",
+    "image": "https://picsum.photos/seed/sunt/300/200"
+  },
+  {
+    "id": 7,
+    "name": "Liquidoc",
+    "price": 31,
+    "description": "Tempor nulla cupidatat eu exercitation enim irure aliqua ea sit laboris deserunt.",
+    "image": "https://picsum.photos/seed/dolor/300/200"
+  },
+  {
+    "id": 8,
+    "name": "Avenetro nisi labore",
+    "price": 80,
+    "description": "Deserunt id adipisicing mollit quis ad. Ipsum consequat voluptate magna cupidatat. Dolore exercitation tempor eiusmod proident ipsum ea nulla ipsum qui duis cillum amet.",
+    "image": "https://picsum.photos/seed/ullamco/300/200"
+  },
+  {
+    "id": 9,
+    "name": "Enaut incididunt sint",
+    "price": 1536,
+    "description": "Elit adipisicing culpa eu officia elit esse esse labore. Officia amet qui cupidatat nisi ut. Dolor anim nulla anim ullamco amet officia.",
+    "image": "https://picsum.photos/seed/id/300/200"
+  },
+  {
+    "id": 10,
+    "name": "Ontagene ea",
+    "price": 18,
+    "description": "Esse et aute irure reprehenderit id aliqua cillum commodo do ex.",
+    "image": "https://picsum.photos/seed/exercitation/300/200"
+  }
+]
