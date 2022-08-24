@@ -2,7 +2,10 @@
     <div class="hamburger-menu-icon"><a (click)="onMenuIconClick()"><i class="material-icons">menu</i></a></div>
     <a routerLink="/"><h2>Fake Shop</h2></a>
     <div class="filler-div"></div>
-    <a routerLink="/cart">
+    <a routerLink="/cart" *ngIf="showObject.showCheckout">
         <button class="button fancy-button" [disabled]="emptyCartObservable | async">Checkout</button>
+    </a>
+    <a routerLink="/buy" *ngIf="showObject.showBuy">
+        <button class="button fancy-button">Buy</button>
     </a>
 </div>

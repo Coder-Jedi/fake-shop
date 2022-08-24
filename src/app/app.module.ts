@@ -11,6 +11,8 @@ import { ProductListCardComponent } from './product-list-card/product-list-card.
 import { CartComponent } from './cart/cart.component';
 import { FilterItemComponent } from './filter-item/filter-item.component';
 import { CartListCardComponent } from './cart-list-card/cart-list-card.component';
+import { BuyPageComponent } from './buy-page/buy-page.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CartListCardComponent } from './cart-list-card/cart-list-card.component
     ProductListCardComponent,
     CartComponent,
     FilterItemComponent,
-    CartListCardComponent
+    CartListCardComponent,
+    BuyPageComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
