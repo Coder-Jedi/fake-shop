@@ -1,4 +1,7 @@
 <div class="home-container">
-<app-filter></app-filter>
-<app-product-list></app-product-list>
+<div class="sliding-filter-container" [ngClass]="(menuStatusObservable | async) ? 'sliding-filter-container-active' : 'sliding-filter-container-inactive' ">
+    <app-filter class="home-filter"></app-filter>
+    <div class="mask" (click)="this.menuService.toggleMenuStatus()"></div>
+</div>
+<app-product-list class="home-product-list"></app-product-list>
 </div>

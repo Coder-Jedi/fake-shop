@@ -1,4 +1,44 @@
 .home-container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.home-filter {
+    
+}
+.home-product-list {
+
+}
+.sliding-filter-container {
+
+}
+.mask {
+
+}
+
+/* for responsive layout */
+@media only screen and (max-width: 600px) {
+    .sliding-filter-container {
+        position: absolute;
+        width: 100vw;
+        height: calc(100% - 50px);
+        z-index: 1000;
+        transition: left 0.3s ease-in-out;
+    }
+    .mask {
+        background-color: silver;
+        height: 100%;
+        width: 100%;
+        opacity: 0.5;
+    }
+    .home-filter {
+        height: 100%;
+        position: absolute;
+        z-index: 2000;
+    }
+    .sliding-filter-container-active {
+        left: 0;
+    }
+    .sliding-filter-container-inactive {
+        left: -1000px;
+    }
 }

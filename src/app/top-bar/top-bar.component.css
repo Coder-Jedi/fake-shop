@@ -9,3 +9,16 @@
 .filler-div {
     flex-grow: 1;
 }
+
+.hamburger-menu-icon {
+    display: none;
+    margin-right: 20px;
+}
+
+/* for responsive layout */
+@media only screen and (max-width: 600px) {
+    .hamburger-menu-icon {
+        display: block;
+        margin-right: 20px;
+    }
+}
