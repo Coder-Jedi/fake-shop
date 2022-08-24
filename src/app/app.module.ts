@@ -10,6 +10,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductListCardComponent } from './product-list-card/product-list-card.component';
 import { CartComponent } from './cart/cart.component';
 import { FilterItemComponent } from './filter-item/filter-item.component';
+import { CartListCardComponent } from './cart-list-card/cart-list-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FilterItemComponent } from './filter-item/filter-item.component';
     ProductListComponent,
     ProductListCardComponent,
     CartComponent,
-    FilterItemComponent
+    FilterItemComponent,
+    CartListCardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<div class="card-container">
+    <div class="image-container">
+        <img [src]="product.image" style="width: 100%;">
+    </div>
+    <div class="name-description-container">
+        <h3>{{product.name}}</h3>
+        <p class="limit-chars">{{product.description}}</p>
+    </div>    
+    <div class="price-button-container">
+    <h3>{{product.price | currency:'USD':'symbol':'1.0-2'}}</h3>
+    <button class="button" >Add</button>
+    </div>
+    </div>
