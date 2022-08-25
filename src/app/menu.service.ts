@@ -22,9 +22,7 @@ export class MenuService {
   getMenuStatus() : boolean {
     return this.menuStatus;
   }
-  toggleMenuStatus() : boolean {
-    console.log("toggleMenuStatus called: ", this.menuStatus);
-    
+  toggleMenuStatus() : boolean {    
     this.menuStatus = !this.menuStatus;
     this.menuStatusUpdateEvent.emit(this.getMenuStatus());
     return this.menuStatus;

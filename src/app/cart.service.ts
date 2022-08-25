@@ -16,7 +16,16 @@ export class CartService {
     subscriber.next(this.isCartEmpty());
 
     //rest values will be sent after event trigger
-    const handler = (e : any) => subscriber.next(e);
+    const handler = () => subscriber.next(this.isCartEmpty());
+    this.cartUpdateEvent.subscribe(handler);
+  });
+
+  cartTotalObservable = new Observable<number>(subscriber => {
+    //sending the first value w/o event trigger after subscribing
+    subscriber.next(this.getCartTotal());
+
+    //rest values will be sent after event trigger
+    const handler = () => subscriber.next(this.getCartTotal());
     this.cartUpdateEvent.subscribe(handler);
   });
 
@@ -27,16 +36,21 @@ export class CartService {
   }
   addItem(product:Product) : Product {
     this.items.push(product);
-    this.cartUpdateEvent.emit(this.isCartEmpty());
+    this.cartUpdateEvent.emit();
     return product;
   }
   emptyCart() : Product[] {
     this.items = [];
-    this.cartUpdateEvent.emit(this.isCartEmpty());
+    this.cartUpdateEvent.emit();
     return this.items;
   }
   isCartEmpty() : boolean {
     return this.items.length==0 ? true : false;
+  }
+  getCartTotal() : number {
+    let sum = 0;
+    this.items.forEach(p => sum+=p.price);
+    return sum;
   }
 
 }

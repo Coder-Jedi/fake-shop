@@ -13,6 +13,7 @@ import { FilterItemComponent } from './filter-item/filter-item.component';
 import { CartListCardComponent } from './cart-list-card/cart-list-card.component';
 import { BuyPageComponent } from './buy-page/buy-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FilterItemComponent,
     CartListCardComponent,
     BuyPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

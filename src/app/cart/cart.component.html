@@ -1,3 +1,7 @@
 <div class="cart-container">
 <app-cart-list-card *ngFor="let product of products" [product]="product"></app-cart-list-card>
+<div class="total-container">
+    <div><h2>Total</h2></div>
+    <div><h2>{{cartTotalObservable|async|currency}}</h2></div>
+</div>
 </div>

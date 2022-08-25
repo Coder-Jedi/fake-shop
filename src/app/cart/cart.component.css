@@ -1,7 +1,19 @@
 .cart-container {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
     padding: 15px 5px;
     row-gap: 10px;
     justify-content: center;
+    align-items: center;
+}
+.total-container {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    border: 2px solid deepskyblue;
+    width: 200px;
+    height: 48px;
+    justify-content: space-around;
+    align-items: center;
 }

@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="hamburger-menu-icon"><a (click)="onMenuIconClick()"><i class="material-icons">menu</i></a></div>
+    <div class="hamburger-menu-icon" *ngIf="showObject.showHamburger"><a (click)="onMenuIconClick()"><i class="material-icons">menu</i></a></div>
     <a routerLink="/"><h2>Fake Shop</h2></a>
     <div class="filler-div"></div>
     <a routerLink="/cart" *ngIf="showObject.showCheckout">
