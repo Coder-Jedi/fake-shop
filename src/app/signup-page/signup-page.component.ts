@@ -4,15 +4,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
-  selector: 'app-login-page',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  selector: 'app-signup-page',
+  templateUrl: './signup-page.component.html',
+  styleUrls: ['./signup-page.component.css']
 })
-export class LoginPageComponent implements OnInit {
+export class SignupPageComponent implements OnInit {
 
   private returnUrl! : string;
 
-  loginForm = this.fb.group({
+  signupForm = this.fb.group({
     username: ['', Validators.required],
     password: ['', Validators.required]
   });
@@ -26,11 +26,11 @@ export class LoginPageComponent implements OnInit {
   }
 
   onFormSubmit() {
-    if(this.loginForm.value.username && this.loginForm.value.password)
+    if(this.signupForm.value.username && this.signupForm.value.password)
     {
-      if(this.authService.login(this.loginForm.value.username, this.loginForm.value.password))
+      if(this.authService.login(this.signupForm.value.username, this.signupForm.value.password))
       {
-        //login sucessful : return to previous page or home
+        //signup sucessful : return to previous page or home
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
         this.router.navigate([this.returnUrl]);        
       }

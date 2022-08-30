@@ -6,14 +6,24 @@
                             [isActive]="filters==null || filters.length==0"></app-filter-item>
         </li>
         <li>
-            <app-filter-item filterName="Tables" 
+            <app-filter-item filterName="Men's Clothing" 
                             (filterSelect)="onFilterSelect($event)"
-                            [isActive]="filters!=null && filters.includes('tables')"></app-filter-item>
+                            [isActive]="filters!=null && filters.includes('men\'s clothing')"></app-filter-item>
         </li>
         <li>
-            <app-filter-item filterName="Chairs" 
+            <app-filter-item filterName="Women's Clothing" 
                             (filterSelect)="onFilterSelect($event)"
-                            [isActive]="filters!=null && filters.includes('chairs')"></app-filter-item>
+                            [isActive]="filters!=null && filters.includes('women\'s clothing')"></app-filter-item>
+        </li>
+        <li>
+            <app-filter-item filterName="Jewelery" 
+                            (filterSelect)="onFilterSelect($event)"
+                            [isActive]="filters!=null && filters.includes('jewelery')"></app-filter-item>
+        </li>
+        <li>
+            <app-filter-item filterName="Electronics" 
+                            (filterSelect)="onFilterSelect($event)"
+                            [isActive]="filters!=null && filters.includes('electronics')"></app-filter-item>
         </li>
     </ul>
 </div>

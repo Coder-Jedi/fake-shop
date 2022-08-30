@@ -2,6 +2,7 @@
     padding: 20px;
     width: 267px;
     border: solid 1px;
+    height: 100%;
 }
 .card-name-price-container {
     display: flex;

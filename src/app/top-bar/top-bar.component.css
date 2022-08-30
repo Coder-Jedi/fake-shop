@@ -9,6 +9,24 @@
 .filler-div {
     flex-grow: 1;
 }
+.login-button {
+    margin-right: 10px;
+}
+.user-button-container {
+    position: relative;
+}
+.user-info-dialog {
+    position: absolute;
+    right: 0px;
+    margin-top: 1px;
+    width: 124px;
+    background-color: white;
+    border: 1px solid deepskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5px 5px 5px;
+}
 
 .hamburger-menu-icon {
     display: none;

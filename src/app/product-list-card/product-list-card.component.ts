@@ -19,7 +19,7 @@ export class ProductListCardComponent implements OnInit {
 
   //  product : Product = {
   //   "id": 1,
-  //   "name": "Wazzu",
+  //   "title": "Wazzu",
   //   "price": 1071,
   //   "description": "Elit ad minim dolor fugiat est adipisicing anim veniam velit est dolore. Laboris et veniam et ullamco mollit esse fugiat Lorem anim excepteur nulla culpa et. In veniam Lorem ut aliqua labore incididunt mollit eiusmod ea non.",
   //   "image": "https://picsum.photos/seed/veniam/225/160",
@@ -28,7 +28,7 @@ export class ProductListCardComponent implements OnInit {
 
   addToCart(product: Product) {
     this.cartService.addItem(product);
-    window.alert(`The product: ${product.name} has been added to cart`);
+    window.alert(`The product: ${product.title} has been added to cart`);
   }
 
 }

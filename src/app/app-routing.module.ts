@@ -6,12 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './services/auth.guard';
+import { SignupPageComponent } from './signup-page/signup-page.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'cart', component:CartComponent, canActivate:[AuthGuard]},
   {path: 'buy', component:BuyPageComponent, canActivate:[AuthGuard]},
   {path: 'login', component:LoginPageComponent},
+  {path: 'signup', component:SignupPageComponent},
   {path: '**', component:PageNotFoundComponent}
 ];
 

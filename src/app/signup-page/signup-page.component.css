@@ -1,8 +1,8 @@
-.login-outer-container {
+.signup-outer-container {
     display: flex;
     justify-content: center;
 }
-.login-container {
+.signup-container {
     width: 500px;
     height: 600px;
     background-color: aliceblue;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
 }
-.login-button{
+.signup-button{
     width: 100%;
     justify-content: center;
 }

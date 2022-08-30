@@ -2,6 +2,26 @@
     <div class="hamburger-menu-icon" *ngIf="showObject.showHamburger"><a (click)="onMenuIconClick()"><i class="material-icons">menu</i></a></div>
     <a routerLink="/"><h2>Fake Shop</h2></a>
     <div class="filler-div"></div>
+    <!-- login button conditions -->
+    <a routerLink="/login" class="login-button" *ngIf="showObject.showLogin">
+        <button class="button fancy-button">Login</button>
+    </a>
+    <div *ngIf="showObject.showUser" class="user-button-container">
+        <a class="login-button" (click)="toggleUserInfoDialog()">
+            <button class="button fancy-button">{{currentUserSubject | async}}</button>
+        </a>
+        <div class="user-info-dialog" *ngIf="showUserInfoDialog">
+            <p>Signed-In as {{currentUserSubject | async}}</p>
+            <button (click)="handleLogout()">LogOut</button>
+        </div>
+    </div>
+
+    <!-- SignUp Button Conditions -->
+    <a routerLink="/signup" class="login-button" *ngIf="showObject.showSignUp">
+        <button class="button fancy-button">SignUp</button>
+    </a>
+    
+    <!-- checkout and buy button conditions -->
     <a routerLink="/cart" *ngIf="showObject.showCheckout">
         <button class="button fancy-button" [disabled]="emptyCartObservable | async">Checkout</button>
     </a>

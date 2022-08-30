@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Product, products } from './products';
+import { Observable, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Product } from './products';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +15,7 @@ export class DataService {
   private filterUpdateEvent = new EventEmitter();
 
   getProductsObservable = new Observable<Product[]>(subscriber => {
+    this.getProductsFromApi().subscribe();
     //first value will be sent w/o event trigger
     subscriber.next(this.getProducts());
 
@@ -30,19 +33,23 @@ export class DataService {
     this.filterUpdateEvent.subscribe(handler);
   });
 
-  constructor() {
-    this.rawProducts = products;
+  constructor(private httpClient : HttpClient) {
   }
 
   getProducts() : Product[] {
-    return products.filter(product => {
-      for(let f of this.filters)
-      {
-        if(!product.category.includes(f))
-          return false;
-      }
-      return true;
-    });
+    if(this.rawProducts) {
+      return this.rawProducts
+      .filter(product => {
+        for(let f of this.filters)
+        {
+          if(!(product.category == f))
+            return false;
+        }
+        return true;
+      });
+    }
+    else
+      return [];
   }
   getFilters() : string[] {
     return this.filters;
@@ -51,6 +58,15 @@ export class DataService {
     this.filters = filters;
     this.filterUpdateEvent.emit();
     return this.filters;
+  }
+
+  getProductsFromApi() {
+    return this.httpClient.get<any[]>(`${environment.apiUrl}/products`).pipe(
+      tap((res)=>{
+        this.rawProducts = res;
+        this.filterUpdateEvent.emit();
+      })
+    );
   }
 
 

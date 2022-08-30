@@ -24,11 +24,17 @@ export class FilterComponent implements OnInit {
       case "All Categories":
         this.dataService.setFilters([]);
         break;
-      case "Tables":
-        this.dataService.setFilters(["tables"]);
+      case "Men's Clothing":
+        this.dataService.setFilters(["men's clothing"]);
         break;
-      case "Chairs":
-        this.dataService.setFilters(["chairs"]);
+      case "Women's Clothing":
+        this.dataService.setFilters(["women's clothing"]);
+        break;
+      case "Jewelery":
+        this.dataService.setFilters(["jewelery"]);
+        break;
+      case "Electronics":
+        this.dataService.setFilters(["electronics"]);
         break;    
       default:
         break;

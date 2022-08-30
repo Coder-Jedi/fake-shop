@@ -1,1 +1,13 @@
-<p>login-page works!</p>
+<div class="login-outer-container">
+    <div class="login-container">
+        <h1>Login</h1>
+        <form [formGroup]="loginForm" class="form-container" (ngSubmit)="onFormSubmit()">
+            <label for="username">Username</label>
+            <input id="username" type="text" formControlName="username">
+            <label for="password">Password</label>
+            <input id="password" type="password" formControlName="password">
+            <button type="submit" class="login-button" [disabled]="!this.loginForm.valid">Login</button>
+        </form>
+
+    </div>
+</div>
